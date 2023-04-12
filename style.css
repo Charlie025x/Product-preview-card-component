@@ -9,6 +9,8 @@
 
 body {
   background-color: var(--clr-cream);
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .attribution {
