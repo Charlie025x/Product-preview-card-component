@@ -24,10 +24,12 @@ body {
 }
 
 .card {
-  width: min(100% - 2rem, 50rem);
+  width: min(100% - 2rem, 45rem);
   border-radius: 0.5rem;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
+
 .banner-container {
   background-image: url(./images/image-product-mobile.jpg);
   background-size: cover;
@@ -36,7 +38,6 @@ body {
 
 .card .card-body {
   background-color: var(--clr-white);
-  margin-bottom: 1rem;
   padding: 1.5rem;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -55,21 +56,17 @@ body {
 
 .card .card-title {
   color: var(--clr-very-dark-blue);
+  font-size: 2rem;
+  line-height: 1;
 }
+
+.card .card-text {
+  line-height: 1.5;
+}
+
 .card .sale-price {
   color: var(--clr-dark-cyan);
   font-size: 2rem;
-}
-
-.card .card-button {
-  display: block;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: var(--clr-dark-cyan);
-  width: 100%;
-  padding-block: 1rem;
-  color: var(--clr-white);
-  font-weight: 700;
 }
 
 .card .price {
@@ -83,6 +80,25 @@ body {
   text-decoration: line-through;
 }
 
+.card .card-button {
+  display: block;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--clr-dark-cyan);
+  width: 100%;
+  padding-block: 1rem;
+  color: var(--clr-white);
+  font-weight: 700;
+}
+
+.card .card-button:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
+.card .card-button:active {
+  transform: translate(0px, 2px);
+}
+
 .card .cart-icon {
   transform: translate(-30%, 15%);
 }
@@ -93,4 +109,32 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .banner-container {
+    background-image: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+    height: 100%;
+  }
+
+  .card .card-body {
+    font-size: 16px;
+    padding: 2.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+
+  .card .card-title {
+    font-size: 2.5rem;
+  }
+
+  .card .price {
+    margin-block: 2rem;
+  }
 }
